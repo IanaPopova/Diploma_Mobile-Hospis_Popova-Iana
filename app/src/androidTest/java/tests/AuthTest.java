@@ -14,6 +14,7 @@ import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import io.qameta.allure.kotlin.junit4.DisplayName;
+
 import pages.AuthPage;
 import ru.iteco.fmhandroid.ui.AppActivity;
 
@@ -25,8 +26,8 @@ public class AuthTest {
 
     private static final String VALID_LOGIN = "login2";
     private static final String VALID_PASSWORD = "password2";
-    private static final String INVALID_LOGIN = "invalid_login";
-    private static final String INVALID_PASSWORD = "invalid_password";
+    private static final String INVALID_LOGIN = "login";
+    private static final String INVALID_PASSWORD = "password";
 
     private AuthPage authPage;
 
@@ -37,9 +38,7 @@ public class AuthTest {
     @Before
     public void setUp() {
         authPage = new AuthPage();
-
         authPage.logoutIfNeeded();
-
         authPage.waitForAuthorizationScreen();
     }
 
