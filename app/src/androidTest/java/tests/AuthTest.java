@@ -24,8 +24,8 @@ import ru.iteco.fmhandroid.ui.AppActivity;
 @Feature("Авторизация")
 public class AuthTest {
 
-    private static final String VALID_LOGIN = "login2";
-    private static final String VALID_PASSWORD = "password2";
+    static final String VALID_LOGIN = "login2";
+    static final String VALID_PASSWORD = "password2";
     private static final String INVALID_LOGIN = "login";
     private static final String INVALID_PASSWORD = "password";
 
@@ -35,11 +35,15 @@ public class AuthTest {
     public ActivityScenarioRule<AppActivity> activityRule =
             new ActivityScenarioRule<>(AppActivity.class);
 
+
     @Before
     public void setUp() {
         authPage = new AuthPage();
-        authPage.logoutIfNeeded();
-        authPage.waitForAuthorizationScreen();
+        if (!authPage.isAuthorizationScreenDisplayed()) {
+            if (authPage.isUserAuthorized()) {
+                authPage.logout();
+            }
+        }
     }
 
     @Test
