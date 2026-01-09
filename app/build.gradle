@@ -103,5 +103,4 @@ dependencies {
     androidTestImplementation 'io.qameta.allure:allure-java-commons:2.21.0'
     androidTestImplementation 'androidx.test.espresso:espresso-intents:3.4.0'
     androidTestImplementation 'androidx.test.espresso:espresso-idling-resource:3.4.0'
-
 }

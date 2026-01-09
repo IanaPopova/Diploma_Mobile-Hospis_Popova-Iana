@@ -11,34 +11,28 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import io.qameta.allure.Description;
-import io.qameta.allure.Epic;
-import io.qameta.allure.Feature;
-import io.qameta.allure.Story;
 import io.qameta.allure.android.runners.AllureAndroidJUnit4;
-import io.qameta.allure.kotlin.junit4.DisplayName;
-
-import pages.AboutPage;
 import pages.AuthPage;
+import pages.MainPage;
+import pages.NewsPage;
 import ru.iteco.fmhandroid.ui.AppActivity;
 
 @LargeTest
 @RunWith(AllureAndroidJUnit4.class)
-@Epic("ABOUT")
-@Feature("Экран About")
-public class AboutTest {
+public class AddNewsTest {
 
     @Rule
     public ActivityScenarioRule<AppActivity> activityRule =
             new ActivityScenarioRule<>(AppActivity.class);
-
+    private NewsPage newsPage = new NewsPage();
+    private MainPage mainPage = new MainPage();
     private AuthPage authPage;
-    private AboutPage aboutPage;
+
 
     @Before
     public void setUp() {
         authPage = new AuthPage();
-        aboutPage = new AboutPage();
+        newsPage = new NewsPage();
 
         if (!authPage.isUserAuthorized()) {
             authPage.waitForAuthorizationScreen()
@@ -50,16 +44,22 @@ public class AboutTest {
     }
 
     @Test
-    @Story("Открытие экрана About")
-    @Description("Проверка отображения экрана About и его основных элементов")
-    @DisplayName("Экран About отображается корректно")
-    public void shouldOpenAboutScreen() {
-        aboutPage
-                .openMainMenu()
-                .openAboutFromMenu()
-                .checkVersionBlockIsDisplayed()
-                .checkPrivacyPolicyIsDisplayed()
-                .checkTermsOfUseIsDisplayed()
-                .checkCompanyInfoIsDisplayed();
+    public void shouldAddNewsSuccessfully() {
+
+        mainPage
+                .clickAllNews();
+
+        newsPage
+                .openNewsControlPanel()
+                .checkNewsControlPanelIsOpened()
+                .clickAddNews()
+                .checkPageOpened()
+                .selectCategory("Объявление")
+                .enterTitle("Test news title")
+                .enterDescription("Test news description")
+                .pickDate()
+                .pickTime()
+                .clickSave()
+                .checkControlPanelIsOpen();
     }
 }

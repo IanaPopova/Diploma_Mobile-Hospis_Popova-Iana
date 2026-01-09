@@ -11,34 +11,29 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import io.qameta.allure.Description;
-import io.qameta.allure.Epic;
-import io.qameta.allure.Feature;
-import io.qameta.allure.Story;
 import io.qameta.allure.android.runners.AllureAndroidJUnit4;
-import io.qameta.allure.kotlin.junit4.DisplayName;
-
-import pages.AboutPage;
 import pages.AuthPage;
+import pages.MainPage;
+import pages.NewsPage;
 import ru.iteco.fmhandroid.ui.AppActivity;
 
 @LargeTest
 @RunWith(AllureAndroidJUnit4.class)
-@Epic("ABOUT")
-@Feature("Экран About")
-public class AboutTest {
+public class FilterNewsTest {
 
     @Rule
     public ActivityScenarioRule<AppActivity> activityRule =
             new ActivityScenarioRule<>(AppActivity.class);
 
     private AuthPage authPage;
-    private AboutPage aboutPage;
+    private MainPage mainPage;
+    private NewsPage newsPage;
 
     @Before
     public void setUp() {
         authPage = new AuthPage();
-        aboutPage = new AboutPage();
+        mainPage = new MainPage();
+        newsPage = new NewsPage();
 
         if (!authPage.isUserAuthorized()) {
             authPage.waitForAuthorizationScreen()
@@ -47,19 +42,17 @@ public class AboutTest {
                     .tapSignInButton()
                     .checkUserIsAuthorized();
         }
+        mainPage
+                .clickAllNews();
     }
 
     @Test
-    @Story("Открытие экрана About")
-    @Description("Проверка отображения экрана About и его основных элементов")
-    @DisplayName("Экран About отображается корректно")
-    public void shouldOpenAboutScreen() {
-        aboutPage
-                .openMainMenu()
-                .openAboutFromMenu()
-                .checkVersionBlockIsDisplayed()
-                .checkPrivacyPolicyIsDisplayed()
-                .checkTermsOfUseIsDisplayed()
-                .checkCompanyInfoIsDisplayed();
+    public void shouldShowFilterNewsByCategoryIfHaveNews() {
+        newsPage.openNewsControlPanel()
+                .checkNewsControlPanelIsOpened()
+                .clickFilterButton()
+                .selectCategoryForFilter(1)
+                .applyFilter()
+                .checkNewsTitleContains("День рождения445564");
     }
 }

@@ -1,7 +1,6 @@
 package tests;
 
 import androidx.test.ext.junit.rules.ActivityScenarioRule;
-import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.filters.LargeTest;
 
 import org.junit.Before;
@@ -13,13 +12,14 @@ import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
+import io.qameta.allure.android.runners.AllureAndroidJUnit4;
 import io.qameta.allure.kotlin.junit4.DisplayName;
 
 import pages.AuthPage;
 import ru.iteco.fmhandroid.ui.AppActivity;
 
 @LargeTest
-@RunWith(AndroidJUnit4.class)
+@RunWith(AllureAndroidJUnit4.class)
 @Epic("AUTH")
 @Feature("Авторизация")
 public class AuthTest {
@@ -34,7 +34,6 @@ public class AuthTest {
     @Rule
     public ActivityScenarioRule<AppActivity> activityRule =
             new ActivityScenarioRule<>(AppActivity.class);
-
 
     @Before
     public void setUp() {
@@ -51,23 +50,24 @@ public class AuthTest {
     @Description("Проверка входа с валидными учетными данными")
     @DisplayName("Успешный вход с валидным логином и паролем")
     public void shouldLoginWithValidCredentials() {
-        authPage
-                .enterLogin(VALID_LOGIN)
-                .enterPassword(VALID_PASSWORD)
-                .tapSignInButton()
-                .checkUserIsAuthorized();
-    }
+            authPage
+                    .enterLogin(VALID_LOGIN)
+                    .enterPassword(VALID_PASSWORD)
+                    .tapSignInButton()
+                    .checkUserIsAuthorized();
+            }
 
     @Test
     @Story("Авторизация с неверными данными")
     @Description("Проверка, что вход невозможен с невалидными учетными данными")
     @DisplayName("Ошибка при вводе неверных учетных данных")
     public void shouldNotLoginWithInvalidCredentials() {
-        authPage
-                .enterLogin(INVALID_LOGIN)
-                .enterPassword(INVALID_PASSWORD)
-                .tapSignInButton()
-                .checkUserIsNotAuthorized();
+
+            authPage
+                    .enterLogin(INVALID_LOGIN)
+                    .enterPassword(INVALID_PASSWORD)
+                    .tapSignInButton()
+                    .checkUserIsNotAuthorized();
     }
 
     @Test
@@ -75,6 +75,7 @@ public class AuthTest {
     @Description("Проверка, что вход невозможен без логина и пароля")
     @DisplayName("Ошибка при попытке входа с пустыми полями")
     public void shouldNotLoginWithEmptyFields() {
+
         authPage
                 .tapSignInButton()
                 .checkUserIsNotAuthorized();
