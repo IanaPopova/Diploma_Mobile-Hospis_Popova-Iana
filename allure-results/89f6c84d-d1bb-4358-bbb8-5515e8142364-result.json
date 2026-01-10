@@ -1,0 +1,53 @@
+{
+    "name": "shouldOpenNewsFromMainPage",
+    "start": 1767960172281,
+    "stop": 1767960176352,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "89f6c84d-d1bb-4358-bbb8-5515e8142364",
+    "historyId": "a2c5b3bdeae597ed3ad84e696da58b8f",
+    "fullName": "tests.NewsOpenPageTest.shouldOpenNewsFromMainPage",
+    "labels": [
+        {
+            "name": "package",
+            "value": "tests"
+        },
+        {
+            "name": "testClass",
+            "value": "tests.NewsOpenPageTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "shouldOpenNewsFromMainPage"
+        },
+        {
+            "name": "suite",
+            "value": "tests.NewsOpenPageTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(92)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

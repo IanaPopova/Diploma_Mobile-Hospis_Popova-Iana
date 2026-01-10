@@ -1,0 +1,53 @@
+{
+    "name": "Ошибка при попытке входа с пустыми полями",
+    "start": 1767724372665,
+    "stop": 1767724376978,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "22d175bd-03b6-4d6e-99f6-3943cbb4105e",
+    "historyId": "616d1ada31b1fa63737506b702b827a4",
+    "fullName": "tests.AuthTest.shouldNotLoginWithEmptyFields",
+    "labels": [
+        {
+            "name": "package",
+            "value": "tests"
+        },
+        {
+            "name": "testClass",
+            "value": "tests.AuthTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "shouldNotLoginWithEmptyFields"
+        },
+        {
+            "name": "suite",
+            "value": "tests.AuthTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(99)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

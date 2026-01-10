@@ -1,0 +1,53 @@
+{
+    "name": "Экран About отображается корректно",
+    "start": 1767812583153,
+    "stop": 1767812588766,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "3930dd45-50e2-4dd6-bcdd-b42165998870",
+    "historyId": "40d4b4568d756ce6fc6c24c451d90587",
+    "fullName": "tests.AboutTest.shouldOpenAboutScreen",
+    "labels": [
+        {
+            "name": "package",
+            "value": "tests"
+        },
+        {
+            "name": "testClass",
+            "value": "tests.AboutTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "shouldOpenAboutScreen"
+        },
+        {
+            "name": "suite",
+            "value": "tests.AboutTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(114)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

@@ -47,7 +47,7 @@ public class AuthTest {
 
     @Test
     @Story("Успешная авторизация")
-    @Description("Проверка входа с валидными учетными данными")
+    @Description("Вход с валидными учетными данными")
     @DisplayName("Успешный вход с валидным логином и паролем")
     public void shouldLoginWithValidCredentials() {
             authPage
@@ -59,7 +59,7 @@ public class AuthTest {
 
     @Test
     @Story("Авторизация с неверными данными")
-    @Description("Проверка, что вход невозможен с невалидными учетными данными")
+    @Description("Вход невозможен с невалидными учетными данными")
     @DisplayName("Ошибка при вводе неверных учетных данных")
     public void shouldNotLoginWithInvalidCredentials() {
 
@@ -72,7 +72,7 @@ public class AuthTest {
 
     @Test
     @Story("Авторизация с пустыми полями")
-    @Description("Проверка, что вход невозможен без логина и пароля")
+    @Description("Вход невозможен без логина и пароля")
     @DisplayName("Ошибка при попытке входа с пустыми полями")
     public void shouldNotLoginWithEmptyFields() {
 

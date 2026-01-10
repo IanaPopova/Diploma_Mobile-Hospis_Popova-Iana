@@ -12,7 +12,10 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Story;
 import io.qameta.allure.android.runners.AllureAndroidJUnit4;
+import io.qameta.allure.kotlin.junit4.DisplayName;
 import pages.AuthPage;
 import pages.MainPage;
 import pages.NewsPage;
@@ -45,6 +48,9 @@ public class NewsOpenPageTest {
     }
 
     @Test
+    @Story("Страница новостей открывается с главной страницы")
+    @Description("Страницу новостей можно открыть с главной страницы")
+    @DisplayName("Переход на страницу новостей с главной страницы")
     public void shouldOpenNewsFromMainPage() {
         mainPage
                 .clickAllNews();
@@ -54,6 +60,9 @@ public class NewsOpenPageTest {
     }
 
     @Test
+    @Story("Страница новостей открывается с главного меню")
+    @Description("Страницу новостей можно открыть с главного меню")
+    @DisplayName("Переход на страницу новостей с главного меню")
     public void shouldOpenNewsFromMainMenu() {
         mainPage
                 .openMainMenu()

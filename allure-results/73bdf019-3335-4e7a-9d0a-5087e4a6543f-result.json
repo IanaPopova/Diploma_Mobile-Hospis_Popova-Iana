@@ -1,0 +1,53 @@
+{
+    "name": "shouldEditNewsTitleAndDateSuccessfully",
+    "start": 1767968104654,
+    "stop": 1767968110572,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "73bdf019-3335-4e7a-9d0a-5087e4a6543f",
+    "historyId": "4c3993cec95b6abb460ee3d1e585e1d1",
+    "fullName": "tests.EditNewsTest.shouldEditNewsTitleAndDateSuccessfully",
+    "labels": [
+        {
+            "name": "package",
+            "value": "tests"
+        },
+        {
+            "name": "testClass",
+            "value": "tests.EditNewsTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "shouldEditNewsTitleAndDateSuccessfully"
+        },
+        {
+            "name": "suite",
+            "value": "tests.EditNewsTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(95)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

@@ -11,7 +11,10 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Story;
 import io.qameta.allure.android.runners.AllureAndroidJUnit4;
+import io.qameta.allure.kotlin.junit4.DisplayName;
 import pages.AuthPage;
 import pages.MainPage;
 import pages.NewsPage;
@@ -47,6 +50,9 @@ public class FilterNewsTest {
     }
 
     @Test
+    @Story("Фильтрация новостей по категории")
+    @Description("Фильтрация новостей по категории, если новости категории есть")
+    @DisplayName("Новости фильтруются")
     public void shouldShowFilterNewsByCategoryIfHaveNews() {
         newsPage.openNewsControlPanel()
                 .checkNewsControlPanelIsOpened()

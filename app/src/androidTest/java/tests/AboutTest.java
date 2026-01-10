@@ -51,7 +51,7 @@ public class AboutTest {
 
     @Test
     @Story("Открытие экрана About")
-    @Description("Проверка отображения экрана About и его основных элементов")
+    @Description("Отображение экрана About и его основных элементов")
     @DisplayName("Экран About отображается корректно")
     public void shouldOpenAboutScreen() {
         aboutPage

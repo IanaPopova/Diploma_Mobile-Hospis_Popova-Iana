@@ -1,0 +1,53 @@
+{
+    "name": "Успешный вход с валидным логином и паролем",
+    "start": 1767804702711,
+    "stop": 1767804710573,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "05c22d68-9060-4ce8-8185-be2a551cadbe",
+    "historyId": "cc2160a51ee401ea225900c75e56dfe0",
+    "fullName": "tests.AuthTest.shouldLoginWithValidCredentials",
+    "labels": [
+        {
+            "name": "package",
+            "value": "tests"
+        },
+        {
+            "name": "testClass",
+            "value": "tests.AuthTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "shouldLoginWithValidCredentials"
+        },
+        {
+            "name": "suite",
+            "value": "tests.AuthTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(120)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

@@ -11,7 +11,10 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Story;
 import io.qameta.allure.android.runners.AllureAndroidJUnit4;
+import io.qameta.allure.kotlin.junit4.DisplayName;
 import pages.AuthPage;
 import pages.MainPage;
 import pages.NewsPage;
@@ -44,6 +47,9 @@ public class AddNewsTest {
     }
 
     @Test
+    @Story("Добавление новости")
+    @Description("Добавление новости с заполнением полей")
+    @DisplayName("Новость добавляется")
     public void shouldAddNewsSuccessfully() {
 
         mainPage

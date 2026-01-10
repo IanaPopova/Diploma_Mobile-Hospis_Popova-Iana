@@ -11,7 +11,10 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Story;
 import io.qameta.allure.android.runners.AllureAndroidJUnit4;
+import io.qameta.allure.kotlin.junit4.DisplayName;
 import pages.AuthPage;
 import pages.MainPage;
 import pages.NewsPage;
@@ -51,6 +54,9 @@ public class EditNewsTest {
     }
 
     @Test
+    @Story("Редактирование заголовка")
+    @Description("Редактирование заголовка новости")
+    @DisplayName("Заголовок редактируется")
     public void shouldEditNewsTitleSuccessfully() {
         newsPage.openNewsControlPanel()
                 .checkNewsControlPanelIsOpened()
@@ -62,6 +68,9 @@ public class EditNewsTest {
     }
 
     @Test
+    @Story("Редактирование даты публикации")
+    @Description("Редактируется дата публикации написаной новости")
+    @DisplayName("Дата публикации редактируется")
     public void shouldEditDateSuccessfully() {
         newsPage.openNewsControlPanel()
                 .checkNewsControlPanelIsOpened()

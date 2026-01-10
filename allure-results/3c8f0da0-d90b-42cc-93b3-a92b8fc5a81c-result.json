@@ -1,0 +1,53 @@
+{
+    "name": "Ошибка при вводе неверных учетных данных",
+    "start": 1767736869820,
+    "stop": 1767736875548,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "3c8f0da0-d90b-42cc-93b3-a92b8fc5a81c",
+    "historyId": "33e3c5bf5b45c6abe9b9ab4f315980f3",
+    "fullName": "tests.AuthTest.shouldNotLoginWithInvalidCredentials",
+    "labels": [
+        {
+            "name": "package",
+            "value": "tests"
+        },
+        {
+            "name": "testClass",
+            "value": "tests.AuthTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "shouldNotLoginWithInvalidCredentials"
+        },
+        {
+            "name": "suite",
+            "value": "tests.AuthTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(120)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}
