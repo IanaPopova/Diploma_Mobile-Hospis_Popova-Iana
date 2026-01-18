@@ -24,6 +24,11 @@ import ru.iteco.fmhandroid.ui.AppActivity;
 @RunWith(AllureAndroidJUnit4.class)
 public class AddNewsTest {
 
+    static final String CATEGORY = "Объявление";
+    static final String TITLE = "Test news title111";
+    static final String DESCRIPTION = "Test news description";
+
+
     @Rule
     public ActivityScenarioRule<AppActivity> activityRule =
             new ActivityScenarioRule<>(AppActivity.class);
@@ -60,12 +65,13 @@ public class AddNewsTest {
                 .checkNewsControlPanelIsOpened()
                 .clickAddNews()
                 .checkPageOpened()
-                .selectCategory("Объявление")
-                .enterTitle("Test news title")
-                .enterDescription("Test news description")
+                .selectCategory(CATEGORY)
+                .enterTitle(TITLE)
+                .enterDescription(DESCRIPTION)
                 .pickDate()
                 .pickTime()
                 .clickSave()
-                .checkControlPanelIsOpen();
+                .checkControlPanelIsOpen()
+                .checkNewsTitleIsDisplayedOnControlPanel(TITLE);
     }
 }

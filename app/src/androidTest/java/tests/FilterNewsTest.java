@@ -24,6 +24,8 @@ import ru.iteco.fmhandroid.ui.AppActivity;
 @RunWith(AllureAndroidJUnit4.class)
 public class FilterNewsTest {
 
+    static final String TITLE_WITH = "Hi Test";
+
     @Rule
     public ActivityScenarioRule<AppActivity> activityRule =
             new ActivityScenarioRule<>(AppActivity.class);
@@ -57,8 +59,8 @@ public class FilterNewsTest {
         newsPage.openNewsControlPanel()
                 .checkNewsControlPanelIsOpened()
                 .clickFilterButton()
-                .selectCategoryForFilter(1)
+                .selectCategoryForFilter(0)
                 .applyFilter()
-                .checkNewsTitleContains("День рождения445564");
+                .checkNewsTitleContains(TITLE_WITH);
     }
 }

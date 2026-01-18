@@ -29,8 +29,8 @@ public class EditNewsTest {
     public ActivityScenarioRule<AppActivity> activityRule =
             new ActivityScenarioRule<>(AppActivity.class);
 
-    private static final String UPDATED_TITLE = "Updated Test Title!";
-    private static final String UPDATED_DATE = "31.12.2026";
+    private static final String UPDATED_TITLE = "Hi Test";
+    private static final String TITLE = "Test news title111";
     private NewsPage newsPage;
     private AuthPage authPage;
     private MainPage mainPage;
@@ -60,11 +60,11 @@ public class EditNewsTest {
     public void shouldEditNewsTitleSuccessfully() {
         newsPage.openNewsControlPanel()
                 .checkNewsControlPanelIsOpened()
-                .clickEditNewsButton(0)
+                .clickEditNewsButton(TITLE)
                 .enterTitle(UPDATED_TITLE)
                 .clickSave()
                 .checkNewsControlPanelIsOpened()
-                .checkNewsTitleIs(0, UPDATED_TITLE);
+                .checkNewsTitleIs(UPDATED_TITLE);
     }
 
     @Test
@@ -72,12 +72,16 @@ public class EditNewsTest {
     @Description("Редактируется дата публикации написаной новости")
     @DisplayName("Дата публикации редактируется")
     public void shouldEditDateSuccessfully() {
-        newsPage.openNewsControlPanel()
-                .checkNewsControlPanelIsOpened()
-                .clickEditNewsButton(0)
-                .pickDate()
+
+        String updatedDate =
+                newsPage.openNewsControlPanel()
+                        .checkNewsControlPanelIsOpened()
+                        .clickEditNewsButton(TITLE)
+                        .pickDateAndGetValue();
+
+        newsPage
                 .clickSave()
                 .checkNewsControlPanelIsOpened()
-                .checkNewsPublicationDateIs(0, UPDATED_DATE);
+                .checkNewsPublicationDateIs(TITLE, updatedDate);
     }
 }
